@@ -3,7 +3,8 @@
 ## Nom du(des) étudiant(e)(s) de ce monôme/binôme 
 WARNING: NE PAS OUBLIER DE MENTIONNER LES DEUX NOMS SI VOUS ETES EN BINOME!
 
-#XXX# (et #YYY#)
+François Charpentier-Noyer
+Thomas Merlet
 
 Commentaires éventuels des étudiants : #XXXXXX#
 
@@ -51,19 +52,25 @@ TIP: [Rappel Git] Trois dépôts sont ici utilisés : le dépot Github de l'ense
 
 * Observer le code du projet `todolist-debut-ex1`
 
-*Le code est-il structuré en couches ? Quel problèmes ce code peut-il poser ?*
+*Le code est-il structuré en couches ? Quels problèmes ce code peut-il poser ?*
+Non le code semble plutôt structuré en MVC. Cela rend le code confus, et ce risque de confusion/erreur va augmenter si on continue à mêler le métier avec le contrôleur.
+Cela rend de plus les tests plus compliqués.
 
 *Où se trouve le code métier (voir la règle de gestion RG 1) ?*
+La règle de gestion RG 1 est située dans le contrôleur dans : private String finalContent(TodoItem item).
 
 *Cette règle est-elle facilement testable par un test unitaire ?*
+Oui si on considère simplement la méthode, mais cette dernière se trouve dans le contrôleur donc cela complique les tests.
 
 * Lancer une base PostgreSQL en Docker dans un terminal (on lance ici la base en mode interactif pour visualiser son activité. Pour la lancer en tâche de fond, remplacer les options `it` par `d` comme 'daemon'):
 ```bash
 docker run -it -e POSTGRES_PASSWORD=password -p 5432:5432 postgres
 ```
 *Expliquer cette ligne de commande (y compris les options utilisées)*
+Cette commande lance une instance docker de serveur Postgresql avec "password" comme mot de passe de l'utilisateur et avec le port 5432 en tant que port d'écoute.
 
 * Compléter le code manquant dans la méthode `TodoListController.createTodoItem()`
+
 
 *Pourquoi `todoItemRepository` est-il `null` ? Quelle est la meilleure façon de l'injecter ?*
 
