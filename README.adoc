@@ -132,7 +132,7 @@ _Temps estimé : 20 mins_
 * Implémenter (en junit) des TU portant sur la règle de gestion qui consiste à afficher `[LATE!]` dans la description d'un item en retard de plus de 24h.
 
 *Quels types de tests devra-t-on écrire pour les adaptateurs ?* 
-
+On peut écrire des tests pour vérifier que la sauvegarde en bdd fonctionne correctement et aussi tester si les appels rest renvoient les bon codes http.
 *S'il vous reste du temps, écrire quelques-uns de ces types de test.*
 
 [TIP]
