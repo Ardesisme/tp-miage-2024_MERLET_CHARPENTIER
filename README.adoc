@@ -114,6 +114,8 @@ Source : http://leanpub.com/get-your-hands-dirty-on-clean-architecture[Tom Hombe
   - la couche `domain` qui contient les entités (au sens DDD, pas au sens JPA). En général des classes complexes (méthodes riches, relations entre les entités)
 
 *Rappeler en quelques lignes les grands principes de l'architecture hexagonale.*
+L'architecture hexagonale a pour objectif de réduire au maximum les adhérences entre le code métier et le code applicatif.
+Pour ce faire on divise le code en couches (service ou application,domaine ou business, infrastructure) chaque couche n n'est dépendante que de la couche n+1 et on utilise des adapteurs et des ports pour les interactions avec le "monde extérieur".
 
 Compléter ce code avec une fonctionnalité de création de `TodoItem`  persisté en base et appelé depuis un endpoint REST `POST /todos` qui :
 
