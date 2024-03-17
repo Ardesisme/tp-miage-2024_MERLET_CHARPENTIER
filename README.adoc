@@ -73,7 +73,7 @@ Cette commande lance une instance docker de serveur Postgresql avec "password" c
 
 
 *Pourquoi `todoItemRepository` est-il `null` ? Quelle est la meilleure façon de l'injecter ?*
-
+totoItemRepository est null à cause d'une mauvaise utilisation du constructeur, on peut faire une injection par le construcreur avec l'annotation @Inject par exemple.
 * Modifier le code en conséquence.
 
 * Tester vos endpoints avec un client REST.
